@@ -1,0 +1,28 @@
+<svg viewport-fill="#fdf1e6">
+  <text x="50%" y="50%+15" font-family="System-Regular" fill="#b5a89c" font-size="30" font-weight="bold" text-anchor="middle">Loading</text>
+  <rect id="background" x="0" y="0" width="100%" height="100%" />
+  <image id="pusheen" x="10" y="-28" width="280" height="280" load="sync" pointer-events="visible" />
+  
+  <image id="time1" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="time2" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="time3" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="time4" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="time5" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="time6" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="time7" x="0" y="0" width="0" height="0" load="sync" />
+  
+  <image id="date1" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date2" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date3" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date4" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date5" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date6" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date7" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date8" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date9" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date10" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date11" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date12" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date13" x="0" y="0" width="0" height="0" load="sync" />
+  <image id="date14" x="0" y="0" width="0" height="0" load="sync" />
+</svg>

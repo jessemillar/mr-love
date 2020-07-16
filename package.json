@@ -1,0 +1,20 @@
+{
+  "fitbit": {
+    "appUUID": "91297751-1492-4433-bcd0-4867274a60fd",
+    "appType": "clockface",
+    "appDisplayName": "Mr. Love",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "access_activity"
+    ],
+    "buildTargets": [
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "Mr. Love"
+      }
+    }
+  }
+}
