@@ -9,13 +9,8 @@ I do not claim any copyright to Mr. Love or its characters (which is why I'll ne
 ## Development
 
 ```
-cd dev/fonts/please/dark
-../../font.sh ../../Please.ttf "#4e2c11" 48 please- custombold 2
-cd ../light
-../../font.sh ../../Please.ttf "#b5a89c" 48 please- custombold 2
-cd ../../please-small/dark
-../../font.sh ../../Please.ttf "#4e2c11" 24 please-small- custombold 1
-cd ../light
-../../font.sh ../../Please.ttf "#b5a89c" 24 please-small- custombold 1
-cd ../../../../
+cd dev/fonts/big
+../font.sh ../playfair-display/PlayfairDisplay-Regular.ttf "#FCDCE9" 48 "playfair-"
+cd ../small
+../font.sh ../playfair-display/PlayfairDisplay-Regular.ttf "#FCDCE9" 30 "playfair-"
 ```
