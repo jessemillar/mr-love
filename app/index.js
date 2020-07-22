@@ -64,6 +64,6 @@ clock.ontick = (evt) => {
     hour = utils.zeroPad(hour);
   }
     
-  print.font(10, 10, hour+":"+mins+" "+period, font, timeCharacters, "left");
-  print.font(10, 50, month+"-"+day+" "+utils.weekday(weekday).substring(0,3)+" "+steps, fontSmall, dateCharacters, "left");
+  print.font(15, -10, hour+":"+mins+" "+period, font, timeCharacters, "left");
+  print.font(35, 50, month+"-"+day+" "+utils.weekday(weekday).substring(0,3)+" "+steps, fontSmall, dateCharacters, "left");
 }
