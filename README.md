@@ -10,7 +10,7 @@ I do not claim any copyright to Mr. Love or its characters (which is why I'll ne
 
 ```
 cd resources/fonts/big
-../../../dev/fonts/font.sh ../../../dev/fonts/playfair-display/PlayfairDisplay-Regular.ttf "#C94F5A" 55 "playfair-"
+../../../dev/fonts/font.sh ../../../dev/fonts/playfair-display/PlayfairDisplay-Regular.ttf "#ffffff" 55 "playfair-"
 cd ../small
-../../../dev/fonts/font.sh ../../../dev/fonts/playfair-display/PlayfairDisplay-Regular.ttf "#C94F5A" 30 "playfair-"
+../../../dev/fonts/font.sh ../../../dev/fonts/playfair-display/PlayfairDisplay-Regular.ttf "#ffffff" 30 "playfair-"
 ```
