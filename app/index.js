@@ -4,22 +4,16 @@ import { preferences } from "user-settings";
 import { today } from "user-activity";
 import { display } from "display";
 import * as utils from "../common/utils";
-import * as fontDarkPlease from "../resources/fonts/please/dark/please-data.json";
-import * as fontLightPlease from "../resources/fonts/please/light/please-data.json";
-import * as fontDarkPleaseSmall from "../resources/fonts/please-small/dark/please-small-data.json";
-import * as fontLightPleaseSmall from "../resources/fonts/please-small/light/please-small-data.json";
+import * as fs from "fs";
+let font = fs.readFileSync("resources/fonts/big/playfair-data.json", "json");
+let fontSmall = fs.readFileSync("resources/fonts/small/playfair-data.json", "json");
 import * as print from "../common/print";
 
 // Update the clock every minute
 clock.granularity = "minutes";
 
-let dayColor = "#fdf1e6";
-let nightColor = "#000000";
-
 let status = "clock";
-const pusheen = document.getElementById("pusheen");
-const frameCount = 4;
-let curFrame = 1;
+const pusheen = document.getElementById("face");
 
 const timeCharacters = [
   document.getElementById("time1"), 
@@ -48,44 +42,6 @@ const dateCharacters = [
   document.getElementById("date14"),
 ];
 
-const dayAnimations = [
-  "computer",
-  "cupid",
-  "dino",
-  "fierce",
-  "ice-cream",
-  "shades",
-  "pizza"
-];
-
-const nightAnimations = [
-  "blanket",
-  "nap"
-];
-
-// Initial setup
-document.getElementById("background").style.fill = (utils.isDay()) ? dayColor : nightColor;
-let curAnimation = utils.random((utils.isDay()) ? dayAnimations : nightAnimations);
-let font = (utils.isDay()) ? fontDarkPlease : fontLightPlease;
-let fontSmall = (utils.isDay()) ? fontDarkPleaseSmall : fontLightPleaseSmall;
-
-// Ask Pusheen functionality
-pusheen.addEventListener("click", function() {
-  status = "ask";
-  curAnimation = "detective";
-});
-
-// The animation loop
-setInterval(function(){
-  if (curFrame < frameCount) {
-    curFrame++;
-  } else {
-    curFrame = 1;
-  }
-  
-  pusheen.href = "animations/"+curAnimation+"/frame"+curFrame+".png";
-}, 165);
-
 clock.ontick = (evt) => {
   let steps = today.adjusted.steps;
   let date = evt.date;
@@ -108,27 +64,6 @@ clock.ontick = (evt) => {
     hour = utils.zeroPad(hour);
   }
     
-  print.font(150, 216, hour+":"+mins+" "+period, font, timeCharacters, "center");
-  print.font(150, 269, month+"-"+day+" "+utils.weekday(weekday).substring(0,3)+" "+steps, fontSmall, dateCharacters, "center");
+  print.font(10, 10, hour+":"+mins+" "+period, font, timeCharacters, "left");
+  print.font(10, 50, month+"-"+day+" "+utils.weekday(weekday).substring(0,3)+" "+steps, fontSmall, dateCharacters, "left");
 }
-
-// Change the animation when you look away
-display.addEventListener("change", function() {
-  if (!display.on) {
-    if (status == "ask") {
-      status = "clock";
-      
-      if (Math.random() >= 0.5) {
-        curAnimation = "yes";
-      } else {
-        curAnimation = "no";
-      }
-    } else {
-      curAnimation = utils.random((utils.isDay()) ? dayAnimations : nightAnimations);
-    }
-     
-    document.getElementById("background").style.fill = (utils.isDay()) ? dayColor : nightColor;
-    font = (utils.isDay()) ? fontDarkPlease : fontLightPlease;
-    fontSmall = (utils.isDay()) ? fontDarkPleaseSmall : fontLightPleaseSmall;
-  }
-});

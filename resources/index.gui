@@ -1,7 +1,5 @@
-<svg viewport-fill="#fdf1e6">
-  <text x="50%" y="50%+15" font-family="System-Regular" fill="#b5a89c" font-size="30" font-weight="bold" text-anchor="middle">Loading</text>
-  <rect id="background" x="0" y="0" width="100%" height="100%" />
-  <image id="pusheen" x="10" y="-28" width="280" height="280" load="sync" pointer-events="visible" />
+<svg viewport-fill="#000000">
+  <image id="face" href="backgrounds/victor.png" x="0" y="0" width="300" height="300" load="sync" pointer-events="visible" />
   
   <image id="time1" x="0" y="0" width="0" height="0" load="sync" />
   <image id="time2" x="0" y="0" width="0" height="0" load="sync" />

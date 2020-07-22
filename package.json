@@ -9,12 +9,18 @@
       "access_activity"
     ],
     "buildTargets": [
-      "meson"
+      "meson",
+      "gemini",
+      "mira"
     ],
     "i18n": {
       "en": {
         "name": "Mr. Love"
       }
-    }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~4.1.0"
   }
 }
