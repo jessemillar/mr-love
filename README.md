@@ -9,8 +9,8 @@ I do not claim any copyright to Mr. Love or its characters (which is why I'll ne
 ## Development
 
 ```
-cd dev/fonts/big
-../font.sh ../playfair-display/PlayfairDisplay-Regular.ttf "#FCDCE9" 48 "playfair-"
+cd resources/fonts/big
+../../../dev/fonts/font.sh ../../../dev/fonts/playfair-display/PlayfairDisplay-Regular.ttf "#FD9B9C" 55 "playfair-"
 cd ../small
-../font.sh ../playfair-display/PlayfairDisplay-Regular.ttf "#FCDCE9" 30 "playfair-"
+../../../dev/fonts/font.sh ../../../dev/fonts/playfair-display/PlayfairDisplay-Regular.ttf "#FD9B9C" 30 "playfair-"
 ```
