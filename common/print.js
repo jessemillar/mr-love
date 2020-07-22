@@ -46,6 +46,7 @@ export function font(x, y, message, characters, elements, align = "left", space 
     elements[curElement].width = characters[char].width;
     elements[curElement].height = characters[char].height;
     elements[curElement].href = characters[char].href;
+    elements[curElement].style.fill = "#ffffff";
     elements[curElement].style.visibility = "visible";
     
     curElement++;
