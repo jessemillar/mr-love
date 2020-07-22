@@ -11,9 +11,9 @@ METAFILE=$PREFIX"data.json"
 
 CHARACTERS=(0 1 2 3 4 5 6 7 8 9 : - A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z)
 
-echo '{' > "$METAFILE"
+echo '{' > $METAFILE
 
-for i in "${CHARACTERS[@]}"; do
+for i in ${CHARACTERS[@]}; do
 	CHAR=$i
 	SUFFIX=$i
 	MODIFIER=""
@@ -63,21 +63,21 @@ for i in "${CHARACTERS[@]}"; do
 
 	if [[ -z $STYLE ]]
 	then
-		convert -font "$FONT" -fill "$FILL" -pointsize "$SIZE" -background transparent label:$CHAR "$FILENAME"
+		convert -font $FONT -fill $FILL -pointsize $SIZE -background transparent label:$CHAR $FILENAME
 	elif [[ $STYLE == "custombold" ]]
 	then
-		convert -font "$FONT" -fill "$FILL" -pointsize "$SIZE" -stroke "$FILL" -strokewidth "$STROKEWIDTH" -background transparent label:$CHAR "$FILENAME"
+		convert -font $FONT -fill $FILL -pointsize $SIZE -stroke $FILL -strokewidth $STROKEWIDTH -background transparent label:$CHAR $FILENAME
 	else
-		convert -font "$FONT" -fill "$FILL" -pointsize "$SIZE" -style "$STYLE" -background transparent label:$CHAR "$FILENAME"
+		convert -font $FONT -fill $FILL -pointsize $SIZE -style $STYLE -background transparent label:$CHAR $FILENAME
 	fi
 
-	echo -n '"'$SUFFIX'": {"width": ' >> "$METAFILE"
-	convert "$FILENAME" -ping -format "%w" info: | xargs echo -n >> "$METAFILE"
-	echo -n ', "height": ' >> "$METAFILE"
-	convert "$FILENAME" -ping -format "%h" info: | xargs echo -n >> "$METAFILE"
-	echo -n ', "href": "'${PWD#"${PWD%/*/*}/"}'/'$FILENAME'"},' >> "$METAFILE"
+	echo -n '"'$SUFFIX'": {"width": ' >> $METAFILE
+	convert $FILENAME -ping -format "%w" info: | xargs echo -n >> $METAFILE
+	echo -n ', "height": ' >> $METAFILE
+	convert $FILENAME -ping -format "%h" info: | xargs echo -n >> $METAFILE
+	echo -n ', "href": "'${PWD#"${PWD%/*/*}/"}'/'$FILENAME'"},' >> $METAFILE
 done
 
-sed '$ s/.$//' "$METAFILE" | tee "$METAFILE"
+truncate -s-1 $METAFILE
 
-echo '}' >> "$METAFILE"
+echo '}' >> $METAFILE
