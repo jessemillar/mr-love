@@ -63,12 +63,12 @@ for i in ${CHARACTERS[@]}; do
 
 	if [[ -z $STYLE ]]
 	then
-		convert -font $FONT -fill $FILL -pointsize $SIZE -background transparent label:$CHAR $FILENAME
+		convert -colorspace RGB -font $FONT -fill $FILL -pointsize $SIZE -background transparent label:$CHAR $FILENAME
 	elif [[ $STYLE == "custombold" ]]
 	then
-		convert -font $FONT -fill $FILL -pointsize $SIZE -stroke $FILL -strokewidth $STROKEWIDTH -background transparent label:$CHAR $FILENAME
+		convert -colorspace RGB -font $FONT -fill $FILL -pointsize $SIZE -stroke $FILL -strokewidth $STROKEWIDTH -background transparent label:$CHAR $FILENAME
 	else
-		convert -font $FONT -fill $FILL -pointsize $SIZE -style $STYLE -background transparent label:$CHAR $FILENAME
+		convert -colorspace RGB -font $FONT -fill $FILL -pointsize $SIZE -style $STYLE -background transparent label:$CHAR $FILENAME
 	fi
 
 	echo -n '"'$SUFFIX'": {"width": ' >> $METAFILE
