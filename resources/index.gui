@@ -1,7 +1,7 @@
 <svg viewport-fill="#000000">
-  <image id="face" href="backgrounds/victor.png" x="0" y="0" width="300" height="300" load="sync" pointer-events="visible" />
+  <image id="face" href="backgrounds/victor2.png" x="0" y="0" width="300" height="300" load="sync" pointer-events="visible" />
   <image id="glass" href="backgrounds/glass.png" x="0" y="0" width="300" height="300" load="sync" pointer-events="visible" />
-  
+
   <image id="time1" x="0" y="0" width="0" height="0" load="sync" />
   <image id="time2" x="0" y="0" width="0" height="0" load="sync" />
   <image id="time3" x="0" y="0" width="0" height="0" load="sync" />
@@ -9,7 +9,7 @@
   <image id="time5" x="0" y="0" width="0" height="0" load="sync" />
   <image id="time6" x="0" y="0" width="0" height="0" load="sync" />
   <image id="time7" x="0" y="0" width="0" height="0" load="sync" />
-  
+
   <image id="date1" x="0" y="0" width="0" height="0" load="sync" />
   <image id="date2" x="0" y="0" width="0" height="0" load="sync" />
   <image id="date3" x="0" y="0" width="0" height="0" load="sync" />
